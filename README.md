@@ -12,4 +12,4 @@ Here i developed my customized image and label augmentation tools from folder "Y
 So before you execute this tool, you better prepare your training images folder and YOLO formatted label and adjust the path to your own image and label ddirectory
 
 # 4. Training
-Here i clone YOLO train custom data from ultralytics on https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data, and follow the training and detection instructions from there.
+After you've done with 3rd step, go create image file list as instructed on ultralytics repository on https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data by using "create_image_file_list" code by also adjusting your file directory path and follow the rest training and detection instructions from ultralytics repo.
