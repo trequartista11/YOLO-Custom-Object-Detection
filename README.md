@@ -1,8 +1,10 @@
 # YOLO-Custom-Object-Detection-With Augmentation
 Workflow of doing custom dataset training using YOLO framework
 
+
+
 # 1. Prepare your dataset
-Prepare your images as dataset to be annotated
+Prepare your image dataset to be annotated
 
 # 2. Annotate your images
 Use free labelling an annotation tool to create anntotation and label, more information about this tool will be available from its original source https://github.com/tzutalin/labelImg
