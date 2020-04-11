@@ -1,4 +1,4 @@
-# YOLO-Custom-Object-Detection
+# YOLO-Custom-Object-Detection-With Augmentation
 Workflow of doing custom dataset training using YOLO framework
 
 # 1. Prepare your dataset
