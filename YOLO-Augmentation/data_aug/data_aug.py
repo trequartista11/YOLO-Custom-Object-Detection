@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import sys
 import os
 from data_aug.bbox_util import *
+from skimage.filters import gaussian as gs
 
 lib_path = os.path.join(os.path.realpath("."), "data_aug")
 sys.path.append(lib_path)
@@ -811,6 +812,49 @@ class RandomHSV(object):
 
         
         
+        return img, bboxes
+    
+class RandomBlur(object):
+    """Randomly blur an image with certain value of sigma or a set of values in tuple
+    
+    
+    
+    Parameters
+    ----------
+    sigma: integer or tuple(integer)
+        
+    Returns
+    -------
+    
+    numpy.ndaaray
+        Blurred Image
+    
+    numpy.ndarray
+        Original inputted bounding box
+        
+    """
+
+    def __init__(self, sigma = 0):
+        self.sigma = sigma
+
+        
+        if type(self.sigma) == tuple:
+            assert len(self.sigma) > 1, "please put more than 1 value inside tuple"
+            #assert type(self.sigma) == int, "sigma should be integers"
+        else:
+            assert type(self.sigma) == int, "Please input integer"
+
+        
+
+    def __call__(self, img, bboxes):
+    
+        
+        #Chose a random digit to scale by 
+        random_sigma = list(self.sigma)
+        i = random.choice(random_sigma)
+        img = gs(img, sigma = i)
+        
+    
         return img, bboxes
     
 class Sequence(object):
